@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="wpi.ssogden.deeplearningapp.MobileInference">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:onClick="clickGoButton"
+        android:text="@string/go_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/networkDisable" />
+
+    <EditText
+        android:id="@+id/location_textview"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+
+            <CheckBox
+                android:id="@+id/radioStaticLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:padding="2dip"
+                android:text="@string/run_static_local" />
+
+            <CheckBox
+                android:id="@+id/radioStaticRemote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:padding="2dip"
+                android:text="@string/run_static_remote" />
+
+            <CheckBox
+                android:id="@+id/radioDynamic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:padding="2dip"
+                android:text="@string/run_dynamic" />
+
+            <CheckBox
+                android:id="@+id/radioDynamicInverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:padding="2dip"
+                android:text="@string/run_dynamic_inverse" />
+        </TableRow>
+
+        <TableRow android:gravity="center_horizontal">
+
+
+            <CheckBox
+                android:id="@+id/radioTraining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:padding="2dip"
+                android:text="@string/use_training_data" />
+
+            <CheckBox
+                android:id="@+id/radioTesting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:padding="2dip"
+                android:text="@string/use_testing_data" />
+
+        </TableRow>
+
+        <TableRow android:gravity="center_horizontal">
+
+
+            <CheckBox
+                android:id="@+id/radioDoShortCircuit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:padding="2dip"
+                android:text="@string/skip_short_circuit" />
+
+            <CheckBox
+                android:id="@+id/radioAddDelta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:padding="2dip"
+                android:text="@string/add_delta" />
+
+            <CheckBox
+                android:id="@+id/radioRunVariations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:padding="2dip"
+                android:text="@string/run_variations" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <ToggleButton
+        android:id="@+id/networkDisable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:checked="false"
+        android:text="ToggleButton"
+        android:textOff="Network Enabled"
+        android:textOn="Network Disabled"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_textview"
+        tools:text="Network Disable" />
+
+
+</android.support.constraint.ConstraintLayout>

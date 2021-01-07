@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DeepLearningApp</string>
+    <string name="go_button">Go!</string>
+    <string name="use_testing_data">Testing</string>
+    <string name="use_training_data">Training</string>
+    <string name="run_static_local">Local</string>
+    <string name="run_static_remote">Remote</string>
+    <string name="run_dynamic">Dynamic</string>
+    <string name="run_dynamic_inverse">Inverse</string>
+    <string name="skip_short_circuit">Do Short Circuit</string>
+    <string name="add_delta">Add Delta</string>
+    <string name="run_variations">Run Variations</string>
+</resources>
