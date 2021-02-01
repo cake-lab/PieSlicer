@@ -8,7 +8,7 @@ This folder containers the source code for enabling the PieSlicer deep learning 
 - [PrototypeServer](#prototypeserver)
 - [JpegQualityMeasurements](#jpegqualitymeasurements)
 - [Modeling](#modeling)
-- [FlickrScraper][#flickrscraper]
+- [FlickrScraper](#flickrscraper)
 
 ## Deep Learning Measurement
 

@@ -30,6 +30,6 @@ For each image if it was of a size of an unfilled bucket we selected it, and if 
 
 ### Dataset analysis
 
-<img src="../imgs/image_dataset_analysis_file_size.png" width="200"/> 
+<img src="../imgs/image_dataset_analysis_file_size.png" width="500"/> 
 
-<img src="../imgs/image_dataset_analysis_pixel_count.png" width="200"/> 
+<img src="../imgs/image_dataset_analysis_pixel_count.png" width="500"/> 

@@ -9,16 +9,16 @@ Deep learning pre-execution time for mobile devices consists of the latency of t
 The order of these operations can have significant ramifications for latency, with on-device preprocessing and in-cloud preprocessing differing by over an order of magnitude in latency for difference images, as shown below.
 
 
-<img src="../imgs/preprocess_location_time_compare.png" width="200"/> 
+<img src="imgs/preprocess_location_time_compare.png" width="500"/> 
 
 Further, this pre-execution latency is in many cases longer than the execution latency of cloud-based models, making this transfer time the majority of the overall response time.
 
 
-<img src="../imgs/network_transfer_time_percentiles.png" width="200"/> 
+<img src="imgs/network_transfer_time_percentiles.png" width="500"/> 
 
 PieSlicer reduces this pre-execution latency by characterizing each of the components of pre-execution latency to make dynamic preprocessing location decisions.
 
-<img src="../imgs/pieslicer.png" width="200"/> 
+<img src="imgs/pieslicer.png" width="200"/> 
 
 
 ## Key Contributions
