@@ -24,9 +24,8 @@ import static java.lang.System.nanoTime;
  */
 
 public class RemoteClassifier {
-    private static String ip_address = "54.197.37.143"; // "Home"
-    //private static String ip_address = "54.224.30.114"; // "Nexus"
-    private static String server_url = "http://" + ip_address + ":54321/modipick";
+    private static String ip_address = "localhost"; // TODO: Change to match your actual server
+    private static String server_url = "http://" + ip_address + ":54321/pieslicer";
 
     public static final MediaType MEDIA_TYPE_JPEG = MediaType.parse("image/jpeg");
     private static OkHttpClient client = new OkHttpClient();
@@ -90,13 +89,7 @@ public class RemoteClassifier {
     }
 
     protected static String doPostRequest(Context context, String server_url, String mCurrentPhotoPath, Double sla_goal, Double local_prep_time,  Double estimated_transfer_time) throws IOException {
-        /*
-        if (server_offset == 0.0) {
-            updateOffset();
-        } else {
-            Log.v("offset", String.valueOf(server_offset));
-        }
-        */
+
 
         String filename = "test_picture.png";
         File file = new File(mCurrentPhotoPath);

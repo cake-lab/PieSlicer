@@ -363,7 +363,7 @@ public class MobileInference extends AppCompatActivity{
 
                 nanos_modiprep_total = nanoTime() - nanos_modiprep_start;
 
-                values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_LOCAL_MODIPREP, nanos_modiprep_total);
+                values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_LOCAL_PIESLICER, nanos_modiprep_total);
                 values.put(InferenceContract.InferenceEntry.COLUMN_NAME_EXPECTED_TIME_LOCAL_PREP, expected_local_prep_time);
                 values.put(InferenceContract.InferenceEntry.COLUMN_NAME_EXPECTED_TIME_REMOTE_PREP, expected_remote_prep_time);
 
@@ -445,7 +445,7 @@ public class MobileInference extends AppCompatActivity{
         values.put(InferenceContract.InferenceEntry.COLUMN_NAME_IMAGESIZE_ORIG           , (new File(img_path)).length() );
         values.put(InferenceContract.InferenceEntry.COLUMN_NAME_IMAGESIZE_SENT           , (new File(preprocessedImage)).length() );
         values.put(InferenceContract.InferenceEntry.COLUMN_NAME_IMAGE_DIMS               , prep_dims );
-        values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_LOCAL_MODIPREP      , nanosToMillis(nanos_modiprep_total));
+        values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_LOCAL_PIESLICER      , nanosToMillis(nanos_modiprep_total));
 
         values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_LOCAL_PREPROCESS    , nanosToMillis(nanos_preprocess_time ));
         values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_LOCAL_PREPROCESS_RESIZE    , nanosToMillis(nanos_resize_time ));
@@ -462,9 +462,9 @@ public class MobileInference extends AppCompatActivity{
         values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_REMOTE_NETWORK      , remote_results_json.getDouble("network_time") );
         values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_REMOTE_TRANSFER     , remote_results_json.getDouble("transfer_time") );
 
-        values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_REMOTE_PREpieslicer     , remote_results_json.getDouble("server_prep_time") );
+        values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_REMOTE_PREPIESLICER     , remote_results_json.getDouble("server_prep_time") );
 
-        values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_REMOTE_pieslicer   , remote_results_json.getDouble("pieslicer_time") );
+        values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_REMOTE_PIESLICER   , remote_results_json.getDouble("pieslicer_time") );
         values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_REMOTE_LOAD         , remote_results_json.getDouble("load_time") );
 
         values.put(InferenceContract.InferenceEntry.COLUMN_NAME_TIME_REMOTE_GENERAL_RESIZE       , remote_results_json.getDouble("general_resize_time") );
@@ -490,6 +490,7 @@ public class MobileInference extends AppCompatActivity{
 
         ArrayList<String> file_list = new ArrayList<String>();
 
+        // TODO: Change to update image path location
         String baseDir = Environment.getExternalStorageDirectory().getAbsolutePath() + "/images/";
 
 

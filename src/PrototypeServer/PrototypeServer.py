@@ -11,7 +11,6 @@ import os
 import random
 
 import numpy as np
-import tensorflow as tf
 
 import flask
 from flask import Flask, request, redirect, url_for
@@ -66,9 +65,6 @@ def ping_main():
 
 @timeit
 def saveToDisk(uploaded_file):
-    #filename = secure_filename("temp.jpg")
-    #uploaded_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-    #local_filename = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     
     filename = secure_filename("temp.jpg")
     local_filename = os.path.join(app.config['UPLOAD_FOLDER'], filename)
@@ -86,7 +82,7 @@ def runpieslicer_internal(save_time, server_prep_time):
     
     t_budget = t_sla - (t_device_prep + estimated_transfer_time + server_prep_time + estimated_network_time)
     
-    return estimated_network_time, server_prep_time #, t_transfer
+    return estimated_network_time, server_prep_time 
 
 @timeit
 def loadImage(local_filename, *args, **kwargs):

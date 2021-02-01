@@ -24,12 +24,12 @@ import time
 
 #from 
 
-sys.path.append("../../../figures/")
+sys.path.append("../")
 
 import common
 
 
-android_db_dir = "../../../figures/raw_data/android_dbs"
+android_db_dir = './PATH_TO_ANDROID_DBS' # PATH_TO_ANDROID_DBS
 
 a_priori_factors = [
     'sent_size',
@@ -253,7 +253,7 @@ def main():
             print("")
         
         
-        if False:
+        if True:
             @timeit
             def thing():
                 print("KNN Regression")
@@ -268,7 +268,7 @@ def main():
             print(thing())
             print("")
         
-        if False:
+        if True:
             @timeit
             def thing():
                 print("Random Forest")
@@ -282,8 +282,7 @@ def main():
             print(thing())
             print("")
         
-        if False:
-
+        if True:
             @timeit
             def thing():
                 print("Lasso")
@@ -295,7 +294,6 @@ def main():
             print("")
             
         if True:
-            
             @timeit
             def thing():
                 print("Non-linear SVR")
