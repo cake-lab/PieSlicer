@@ -8,6 +8,7 @@ This folder containers the source code for enabling the PieSlicer deep learning 
 - [PrototypeServer](#prototypeserver)
 - [JpegQualityMeasurements](#jpegqualitymeasurements)
 - [Modeling](#modeling)
+- [FlickrScraper][#flickrscraper]
 
 ## Deep Learning Measurement
 
@@ -49,3 +50,9 @@ Note: individual models can be turned on and off via the True-False tree startin
 The goal of this script is to find the size of image files saved under different JPEG qualities.
 Prior to running update the path to the images on line 37.
 
+## Dataset collection
+
+### FlickrScraper
+
+To calculate the distribution of the datasets used run `python scrape_flickr.py`.
+Prior to running you must generate your own [Flickr API key](https://www.flickr.com/services/api/).
