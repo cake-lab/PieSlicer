@@ -18,7 +18,7 @@ Further, this pre-execution latency is in many cases longer than the execution l
 
 PieSlicer reduces this pre-execution latency by characterizing each of the components of pre-execution latency to make dynamic preprocessing location decisions.
 
-<img src="imgs/pieslicer.png" width="200"/> 
+<img src="imgs/pieslicer.png" width="600"/> 
 
 
 ## Key Contributions
