@@ -27,6 +27,12 @@ PieSlicer reduces this pre-execution latency by characterizing each of the compo
 - We implement a prototype system, PieSlicer, that takes advantage of these linear regression models to make fast, yet accurate, pre-execution location decisions.
 - We show that by using our system PieSlicer we can reduce the pre-execution latency by up to 217.2ms, and achieve an $F_1$ score of 0.99.
 
+
+## Acknowledgments
+
+This work was supported by the NSF under grants CNS-#1755659 and CNS-#1815619.
+
+
 ## Citation
 
 ```
@@ -38,4 +44,8 @@ PieSlicer reduces this pre-execution latency by characterizing each of the compo
   organization={Association for Computing Machinery (ACM)}
 }
 ```
+
+## Contact
+
+If you have questions please submit a request or contact [Sam Ogden](https://github.com/samogden).
 
